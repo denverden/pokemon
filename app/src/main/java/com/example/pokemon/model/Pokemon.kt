@@ -1,4 +1,4 @@
-package com.example.test2
+package com.example.pokemon.model
 
 class Pokemon(
     val id: Int,
