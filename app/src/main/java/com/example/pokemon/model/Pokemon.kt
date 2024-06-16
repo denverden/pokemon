@@ -1,6 +1,7 @@
 package com.example.pokemon.model
 
 class Pokemon(
+    val position: Int,
     val id: Int,
     val name: String,
     val height: Int,

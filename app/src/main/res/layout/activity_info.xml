@@ -14,7 +14,7 @@ android:background="@color/red">
     android:layout_marginStart="10dp"
     android:layout_marginBottom="10dp"
     android:fontFamily="sans-serif"
-    android:text="@string/app_title"
+    android:text="@string/app_not_found"
     android:textColor="@color/white"
     android:textSize="24sp"
     app:layout_constraintBottom_toTopOf="@+id/pokemonImage"
@@ -82,7 +82,7 @@ android:background="@color/red">
 
             <TextView
                 android:id="@+id/infoType"
-                android:text=""
+                android:text="@string/app_not_found"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:background="@color/white"
@@ -105,7 +105,7 @@ android:background="@color/red">
 
             <TextView
                 android:id="@+id/infoHeight"
-                android:text=""
+                android:text="@string/app_not_found"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:background="@color/white"
@@ -128,7 +128,7 @@ android:background="@color/red">
 
             <TextView
                 android:id="@+id/infoWeight"
-                android:text=""
+                android:text="@string/app_not_found"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:background="@color/white"
