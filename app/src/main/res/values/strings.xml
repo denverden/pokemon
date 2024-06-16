@@ -8,4 +8,5 @@
     <string name="app_type">Type</string>
     <string name="app_height">Height</string>
     <string name="app_weight">Weight</string>
+    <string name="app_not_found">Not found</string>
 </resources>

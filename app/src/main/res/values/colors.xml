@@ -3,7 +3,4 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF2F2F</color>
-    <color name="electric">#E0B330</color>
-    <color name="fire">#FD7D24</color>
-    <color name="water">#4592C4</color>
 </resources>
