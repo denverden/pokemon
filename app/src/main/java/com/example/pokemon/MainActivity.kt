@@ -1,5 +1,6 @@
 package com.example.pokemon
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
