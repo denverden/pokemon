@@ -2,4 +2,10 @@
     <string name="app_name">Pokemon</string>
     <string name="app_title">Pokemon\'s</string>
     <string name="app_logo">Image Logo</string>
+    <string name="app_back">Image back</string>
+    <string name="app_image_pokemon">Image Pokemon</string>
+    <string name="app_about">About</string>
+    <string name="app_type">Type</string>
+    <string name="app_height">Height</string>
+    <string name="app_weight">Weight</string>
 </resources>
