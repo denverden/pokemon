@@ -5,5 +5,8 @@
     <string name="descr_logo">Image logo</string>
     <string name="descr_pokemon">Image pokemon</string>
     <string name="text_about">About</string>
+    <string name="text_type">Type: %1$s</string>
+    <string name="text_height">Height: %1$s</string>
+    <string name="text_weight">Weight: %1$s</string>
     <string name="not_found">Not found</string>
 </resources>
