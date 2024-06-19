@@ -26,14 +26,17 @@ class Adapter(private val items: List<Pokemon>, private val context: Context) : 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = items[position].name
-        holder.textView.setTextColor(Color.parseColor(items[position].color))
-        holder.imageView.setImageResource(items[position].image)
 
-        holder.cardView.setOnClickListener {
-            val intent = Intent(context, InfoActivity::class.java)
-            intent.putExtra("position", position)
-            context.startActivity(intent)
+        with(holder) {
+            textView.text = items[position].name
+            textView.setTextColor(Color.parseColor(items[position].color))
+            imageView.setImageResource(items[position].image)
+
+            cardView.setOnClickListener {
+                val intent = Intent(context, InfoActivity::class.java)
+                intent.putExtra("position", position)
+                context.startActivity(intent)
+            }
         }
     }
 

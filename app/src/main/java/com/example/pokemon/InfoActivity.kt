@@ -2,6 +2,7 @@ package com.example.pokemon
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pokemon.databinding.ActivityInfoBinding
 
@@ -15,28 +16,25 @@ class InfoActivity : AppCompatActivity() {
 
         val position = intent.getIntExtra("position", -1)
         val pokemon = PokemonMockData.getPokemonPosition(position)
+        val notFound = getString(R.string.not_found)
+        val name = pokemon?.name ?: notFound
+        val image = pokemon?.image ?: R.drawable.logo
+        val color = Color.parseColor(pokemon?.color ?: "#FFFF2F2F")
+        val type = getString(R.string.text_type, pokemon?.type?.joinToString(separator = ", ") ?: notFound)
+        val height = getString(R.string.text_height, pokemon?.height ?: notFound)
+        val weight = getString(R.string.text_weight, pokemon?.weight ?: notFound)
 
-        if (position != -1 && pokemon != null) {
-            val type = getString(R.string.text_type, pokemon.type.joinToString(separator = ", "))
-            val height = getString(R.string.text_height, pokemon.height.toString())
-            val weight = getString(R.string.text_weight, pokemon.weight.toString())
-            binding.pokemonImage.setImageResource(pokemon.image)
-            binding.info.setBackgroundColor(Color.parseColor(pokemon.color))
-            binding.about.setTextColor(Color.parseColor(pokemon.color))
-            binding.pokemonType.text = type
-            binding.pokemonName.text = pokemon.name
-            binding.pokemonHeight.text = height
-            binding.pokemonWeight.text = weight
-        } else {
-            binding.pokemonImage.setImageResource(R.drawable.logo)
-            binding.pokemonType.text = getString(R.string.not_found)
-            binding.pokemonName.text = getString(R.string.not_found)
-            binding.pokemonHeight.text = getString(R.string.not_found)
-            binding.pokemonHeight.text = getString(R.string.not_found)
-        }
-
-        binding.back.setOnClickListener {
-            finish()
+        with(binding) {
+            pokemonName.text = name
+            pokemonImage.setImageResource(image)
+            pokemonType.text = type
+            pokemonHeight.text = height
+            pokemonWeight.text = weight
+            info.setBackgroundColor(color)
+            about.setTextColor(color)
+            back.setOnClickListener {
+                finish()
+            }
         }
     }
 }

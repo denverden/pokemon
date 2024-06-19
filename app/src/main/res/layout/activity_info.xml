@@ -95,6 +95,6 @@
         android:scaleType="centerInside"
         android:contentDescription="@string/descr_logo"
         app:layout_constraintTop_toBottomOf="@id/back"
-        app:srcCompat="@drawable/pikachu" />
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
