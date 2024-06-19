@@ -2,7 +2,6 @@ package com.example.pokemon
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pokemon.databinding.ActivityInfoBinding
 
