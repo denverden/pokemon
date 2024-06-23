@@ -13,7 +13,7 @@ object PokemonMockData {
     fun getPokemons(): List<Pokemon> {
         return pokemons.values.toList()
     }
-    fun getPokemonPosition(position: Int): Pokemon? {
-        return pokemons[position]
+    fun getPokemonById(id: Int): Pokemon? {
+        return pokemons[id]
     }
 }

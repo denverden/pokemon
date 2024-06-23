@@ -8,5 +8,4 @@ class Pokemon(
     val type: List<String>,
     val image: Int,
     val color: String
-) {
-}
+)

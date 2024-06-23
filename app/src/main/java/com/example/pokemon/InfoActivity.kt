@@ -14,8 +14,8 @@ class InfoActivity : AppCompatActivity() {
         binding = ActivityInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val position = intent.getIntExtra("position", -1)
-        val pokemon = PokemonMockData.getPokemonPosition(position)
+        val id = intent.getIntExtra("id", -1)
+        val pokemon = PokemonMockData.getPokemonById(id)
         val notFound = getString(R.string.not_found)
         val name = pokemon?.name ?: notFound
         val image = pokemon?.image ?: R.drawable.logo

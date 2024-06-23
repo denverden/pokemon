@@ -1,9 +1,10 @@
 package com.example.pokemon
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pokemon.customRecycleView.customAdapter
+import com.example.pokemon.customRecycleView.CustomAdapter
 import com.example.pokemon.databinding.ActivityMainBinding
 import com.example.pokemon.repository.PokemonMockData
 
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = binding.listView
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = customAdapter(PokemonMockData.getPokemons(), this)
+        recyclerView.adapter = CustomAdapter(PokemonMockData.getPokemons()) { id ->
+            val intent = Intent(this, InfoActivity::class.java)
+            intent.putExtra("id", id)
+            startActivity(intent)
+        }
     }
 }
