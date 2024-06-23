@@ -3,7 +3,9 @@ package com.example.pokemon
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pokemon.customRecycleView.customAdapter
 import com.example.pokemon.databinding.ActivityMainBinding
+import com.example.pokemon.repository.PokemonMockData
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,6 +17,6 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = binding.listView
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = Adapter(PokemonMockData.getPokemons(), this)
+        recyclerView.adapter = customAdapter(PokemonMockData.getPokemons(), this)
     }
 }

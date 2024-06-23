@@ -1,4 +1,4 @@
-package com.example.pokemon
+package com.example.pokemon.customRecycleView
 
 import android.content.Context
 import android.content.Intent
@@ -7,10 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pokemon.InfoActivity
+import com.example.pokemon.R
 import com.example.pokemon.databinding.CustomCardViewBinding
 import com.example.pokemon.model.Pokemon
 
-class Adapter(private val items: List<Pokemon>, private val context: Context) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+class customAdapter(private val items: List<Pokemon>, private val context: Context) : RecyclerView.Adapter<customAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private var binding = CustomCardViewBinding.bind(view)

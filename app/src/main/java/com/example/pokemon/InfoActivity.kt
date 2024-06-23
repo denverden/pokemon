@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pokemon.databinding.ActivityInfoBinding
+import com.example.pokemon.repository.PokemonMockData
 
 class InfoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInfoBinding

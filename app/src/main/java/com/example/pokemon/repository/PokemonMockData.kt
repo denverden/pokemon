@@ -1,5 +1,6 @@
-package com.example.pokemon
+package com.example.pokemon.repository
 
+import com.example.pokemon.R
 import com.example.pokemon.model.Pokemon
 
 object PokemonMockData {
