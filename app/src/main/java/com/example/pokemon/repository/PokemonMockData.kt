@@ -1,5 +1,6 @@
-package com.example.pokemon
+package com.example.pokemon.repository
 
+import com.example.pokemon.R
 import com.example.pokemon.model.Pokemon
 
 object PokemonMockData {
@@ -12,7 +13,7 @@ object PokemonMockData {
     fun getPokemons(): List<Pokemon> {
         return pokemons.values.toList()
     }
-    fun getPokemonPosition(position: Int): Pokemon? {
-        return pokemons[position]
+    fun getPokemonById(id: Int): Pokemon? {
+        return pokemons[id]
     }
 }
