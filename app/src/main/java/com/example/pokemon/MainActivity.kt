@@ -4,8 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pokemon.customDevider.CustomDivider
 import com.example.pokemon.customRecycleView.CustomAdapter
 import com.example.pokemon.databinding.ActivityMainBinding
 import com.example.pokemon.repository.PokemonMockData
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val divider = ContextCompat.getDrawable(this, R.drawable.separator)!!
-        val decorator = CustomDivider(divider)
-        recyclerView.addItemDecoration(decorator)
+        val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        divider.setDrawable(ContextCompat.getDrawable(this, R.drawable.separator)!!)
+        recyclerView.addItemDecoration(divider)
     }
 }
