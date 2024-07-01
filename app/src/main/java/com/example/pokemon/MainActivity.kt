@@ -18,16 +18,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val recyclerView = binding.listView
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = CustomAdapter(PokemonMockData.getPokemons()) { id ->
-            val intent = Intent(this, InfoActivity::class.java)
-            intent.putExtra("id", id)
-            startActivity(intent)
-        }
+        with(binding) {
+            listView.layoutManager = LinearLayoutManager(this@MainActivity)
+            listView.adapter = CustomAdapter(PokemonMockData.getPokemons()) { id ->
+                val intent = Intent(this@MainActivity, InfoActivity::class.java)
+                intent.putExtra("id", id)
+                startActivity(intent)
+            }
 
-        val divider = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
-        divider.setDrawable(ContextCompat.getDrawable(this, R.drawable.separator)!!)
-        recyclerView.addItemDecoration(divider)
+            val divider = DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL)
+            divider.setDrawable(ContextCompat.getDrawable(this@MainActivity, R.drawable.separator)!!)
+            listView.addItemDecoration(divider)
+        }
     }
 }
