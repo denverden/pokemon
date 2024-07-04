@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         with(binding) {
-            listView.layoutManager = LinearLayoutManager(this@MainActivity)
             listView.adapter = CustomAdapter(PokemonMockData.getPokemons()) { id ->
                 val intent = Intent(this@MainActivity, InfoActivity::class.java)
                 intent.putExtra("id", id)

@@ -39,7 +39,10 @@
         android:layout_height="0dp"
         android:layout_margin="10dp"
         android:background="@drawable/background_field"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image_logo"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintVertical_bias="0.157"
+        tools:layout_editor_absoluteX="3dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
